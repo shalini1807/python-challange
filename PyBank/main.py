@@ -41,3 +41,13 @@ max_decrease_index = changes.index(max_decrease)
 max_decrease_date = data[max_decrease_index + 1][0]
 print(f"Greatest Decrease in profits :{max_decrease_date} (${max_decrease})")
 
+#exporting result in text file
+with open("budget_data_analysis.txt","w")as file:
+    file.write(f"Total Months: {total_months}\n")
+    file.write(f"Total: {total}\n")
+    file.write(f"average: {average}\n")
+    file.write(f"Greatest Increase in profits :{max_date} (${max_increase})\n")
+    file.write(f"Greatest Decrease in profits :{max_decrease_date} (${max_decrease})")
+
+#confirmation msg
+print("budget_data_analysis.txt is saved")    
